@@ -1,8 +1,7 @@
-<div class="todo-list-wrapper">
+<div class="todo-list-wrapper" *ngIf="(todoList$ | async) as todoList">
   <div class="mx-auto col-10">
     <h5>{{'todo-list' | translate}}</h5>
     <hr>
-
     <app-cards-list [tableRef]="todoListRef" [cardRef]="todoItemCardRef" [data]="todoList"></app-cards-list>
   </div>
 
