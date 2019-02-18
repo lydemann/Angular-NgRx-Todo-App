@@ -6,6 +6,7 @@ import { TodoListState } from './todo-list.model';
 export enum TodoListActionTypes {
   LoadTodoList = '[TodoList] Load Todo List',
   TodoItemsLoaded = '[TodoList] TodoItemsLoaded',
+  TodoItemsLoadFailed = '[TodoList] load todo items failed',
   TodoItemCreated = '[TodoList] TodoItemCreated',
   TodoItemDeleted = '[TodoList] TodoItemDeleted',
   TodoItemUpdated = '[TodoList] TodoItemUpdated',
@@ -25,7 +26,7 @@ export class TodoItemsLoaded implements Action {
 }
 
 export class TodoItemsLoadFailed implements Action {
-  readonly type = TodoListActionTypes.TodoItemsLoaded;
+  readonly type = TodoListActionTypes.TodoItemsLoadFailed;
 
   constructor(public payload: { error: Error }) {}
 }
