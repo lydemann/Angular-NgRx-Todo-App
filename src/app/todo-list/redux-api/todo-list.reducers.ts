@@ -84,7 +84,7 @@ const todoItemCompletedReducer = (
   return { ...lastState };
 };
 
-export const TodoListReducers = (
+export const todoListReducers = (
   lastState: TodoListState = new TodoListInitState(),
   action: GenericAction<TodoListActionTypes, any>
 ): TodoListState => {
@@ -95,7 +95,7 @@ export const TodoListReducers = (
       return todoItemsLoaded(lastState, action);
     case TodoListActionTypes.TodoItemCreated:
       return todoItemCreatedReducer(lastState, action);
-    case TodoListActionTypes.TodoItemsLoaded:
+    case TodoListActionTypes.TodoItemsLoadFailed:
       return todoItemsLoadFailed(lastState, action);
     case TodoListActionTypes.TodoItemDeleted:
       return todoItemDeletedReducer(lastState, action);
