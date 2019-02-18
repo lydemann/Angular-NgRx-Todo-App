@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AddTodoModule } from './add-todo/add-todo.module';
 import { TodoListEffects } from './redux-api/todo-list.effects';
-import { TodoListReducers } from './redux-api/todo-list.reducers';
+import { todoListReducers } from './redux-api/todo-list.reducers';
 import { TodoListSelector } from './redux-api/todo-list.selector';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { TodoListSelector } from './redux-api/todo-list.selector';
     CommonModule,
     SharedModule,
     AddTodoModule,
-    StoreModule.forFeature('todoList', TodoListReducers),
+    StoreModule.forFeature('todoList', todoListReducers),
     EffectsModule.forFeature([TodoListEffects])
   ],
   declarations: [TodoListComponent],
