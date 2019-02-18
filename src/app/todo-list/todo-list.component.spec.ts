@@ -41,8 +41,4 @@ describe('TodoListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should have two completed TODO item', () => {
-    expect(component.todoList.length).toBe(2);
-  });
 });
