@@ -14,6 +14,6 @@ export class TodoListEffects {
     ofType(TodoListActionTypes.LoadTodoList),
     exhaustMap(() => this.todoListService.getTodos()),
     map((todoList) => new TodoItemsLoaded(todoList)),
-    catchError((error) => of(new TodoItemsLoadFailed(error)))
+    catchError((error: Error) => of(new TodoItemsLoadFailed(error)))
   );
 }
