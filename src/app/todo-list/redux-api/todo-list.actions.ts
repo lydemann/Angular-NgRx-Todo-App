@@ -28,7 +28,7 @@ export class TodoItemsLoaded implements Action {
 export class TodoItemsLoadFailed implements Action {
   readonly type = TodoListActionTypes.TodoItemsLoadFailed;
 
-  constructor(public payload: { error: Error }) {}
+  constructor(public payload: Error) {}
 }
 
 export class TodoItemCreated implements Action {
