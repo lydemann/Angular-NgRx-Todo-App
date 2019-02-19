@@ -3,7 +3,7 @@ import { TODOItem } from '@app/shared/models/todo-item';
 import { TodoListActionTypes } from './todo-list.actions';
 import { TodoListInitState, todoListReducers } from './todo-list.reducers';
 
-fdescribe('TodoList reducer', () => {
+describe('TodoList reducer', () => {
   describe('default', () => {
     it('should return init state', () => {
       const initState = new TodoListInitState();

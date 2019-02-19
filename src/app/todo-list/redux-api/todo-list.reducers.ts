@@ -93,6 +93,8 @@ export const todoListReducers = (
       return loadTodoItems(lastState, action);
     case TodoListActionTypes.TodoItemsLoaded:
       return todoItemsLoaded(lastState, action);
+    case TodoListActionTypes.TodoItemsLoadFailed:
+      return todoItemsLoadFailed(lastState, action);
     case TodoListActionTypes.TodoItemCreated:
       return todoItemCreatedReducer(lastState, action);
     case TodoListActionTypes.TodoItemsLoadFailed:
