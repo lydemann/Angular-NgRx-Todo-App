@@ -6,10 +6,10 @@ import { TodoListInitState, todoListReducers } from './todo-list.reducers';
 describe('TodoList reducer', () => {
   describe('default', () => {
     it('should return init state', () => {
-      const initState = new TodoListInitState();
       const noopAction = new GenericAction('noop' as TodoListActionTypes);
-      const newState = todoListReducers(initState, noopAction);
+      const newState = todoListReducers(undefined, noopAction);
 
+      const initState = new TodoListInitState();
       expect(newState).toEqual(initState);
     });
   });
